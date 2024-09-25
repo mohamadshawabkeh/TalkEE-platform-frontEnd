@@ -1,0 +1,21 @@
+.mainContainer{
+    display: flex;
+    justify-content: center;
+}
+.mainSection{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #910A67;
+    padding: 3vh 2vh;
+    justify-content: space-around;
+}
+.mainSpans{
+    color: #FFFFFF;
+}
+.routingNavs{
+    display: flex;
+    gap: 10px;
+}

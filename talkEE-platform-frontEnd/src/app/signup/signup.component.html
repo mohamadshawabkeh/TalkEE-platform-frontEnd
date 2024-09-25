@@ -1,0 +1,29 @@
+<main class="mainContainer">
+    <div class="loginContainer">
+        <h1 class="loginButton">TalkEE Platform</h1>
+        <div class="enterInfo">
+            <p class="userName">Username *</p>
+            <input class="emailInput">
+            <p class="password">Email address *</p>
+            <input class="emailInput">
+            <p class="password">Password *</p>
+            <div class="passwordInputContainer" style="    display: flex;
+            gap: 1%;
+            align-items: center;
+            width: 103%;
+        ">
+                <input class="passwordInput" [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="password" #passwordInput>
+                <button mat-icon-button style="background: transparent; border: none;" class="togglePasswordButton" (click)="togglePasswordVisibility()" [attr.aria-label]="hidePassword ? 'Show password' : 'Hide password'">
+                  <img [src]="hidePassword ? eyeOn : eyeOff" alt="Eye icon" class="logoImg">
+                </button>
+              </div>
+        </div>
+        <div class="signupSection">
+            <span class="userName">Do you have account?</span>
+            <p class="lostPassword" 
+            (click)="navigateToRegister()"
+            >Log in</p>
+        </div>
+        <button class="login">Create Account</button>
+    </div>
+</main>

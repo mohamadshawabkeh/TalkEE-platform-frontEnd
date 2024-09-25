@@ -1,0 +1,97 @@
+
+.mainContainer{
+    background-color: #030637;
+    padding: 2vh 0vh;
+}
+.loginContainer{
+    display: flex;
+    margin: 11vh 32vw 11vh 32vw;
+    padding: 4vh 4vw 4vh 3vw;
+    flex-direction: column;
+    background-color: #3C0753;
+    border-radius: 25px;
+    box-shadow: 0px 10px 50px 30px rgb(255 255 255 / 9%);
+}
+.logRegButtons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2vw;
+    padding: 5vh 0vh;
+}
+.loginButton{
+    color:#FFFFFF;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: -0.32px;
+}
+.registerButton{
+    color: #910A67;
+}
+.userName,
+.password{
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19.5px;
+}
+.enterInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+.emailInput,
+.passwordInput{
+    border: #D1D5DB 1px solid;
+    width: 90%;
+    border-radius: 8px;
+    height: 6vh;
+    padding-left: 1vw;
+}
+.rememberPassword{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:3vh 0vw 5vh 0vw;
+    width: 100%;
+}
+.checkbox{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+}
+.checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border: #D1D5DB 1px solid;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px 0px #0000000C;
+
+}
+.lostPassword{
+    color:#910A67;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+}
+.login{
+    width: 103%;
+    color: #FFFFFF;
+    background-color: #910A67;
+    height: 7.2vh;
+    border: none;
+    border-radius: 8px;
+}
+.logoImg{
+    width: 19px;
+    height: 19px;
+    opacity: 45%;
+}
+.signupSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}

@@ -1,0 +1,30 @@
+<main class="mainSection">
+    <nav class="sidenavSection">
+        <app-sidenav></app-sidenav>
+    </nav>
+    <section class="allContainer">
+        <nav class="navSection">
+            <app-navbar></app-navbar>
+        </nav>
+        <div class="blogContainer">
+            <div class="postSide">
+                <div class="addPost">
+                    <div class="userNameSection">
+                        <h2 class="userName">user name</h2>
+                        <h3 class="userName">status</h3>
+                    </div>
+                    <textarea name="addPost" id="addPost" class="postInput">Add your thoughts here</textarea>
+                     <!-- <input class="postInput" [(ngModel)]="post" placeholder="Write your thoughts..."> -->
+                     <button class="postClick">Post</button>
+
+                </div>
+                <div class="allPosts">
+                    old posts
+                </div>
+            </div>
+            <aside class="newSide">
+                news side here
+            </aside>
+        </div>
+    </section>
+</main>
