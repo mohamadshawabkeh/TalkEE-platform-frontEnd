@@ -1,0 +1,93 @@
+.mainSection{
+    padding: 0vh 3vh;
+    width: 95%;
+
+    display: flex;
+    flex-direction: row;
+}
+.sidenavSection{
+    width: 26%;
+    height: 100%;
+}
+
+.mainProfile{
+    width: 78%;
+     // background-color: #3563E9;
+    border-radius: 8px;
+    padding: 2vh 3vh;
+    height: 105vh;
+}
+.profileUser{
+    display: flex;
+    height: 10%;
+    gap: 12px;
+    align-items: center;
+    margin: 2vh;
+    padding: 1vh;
+}
+.profilePicture{
+    height: 50px;
+    width: 50px;
+}
+.profileUser{
+    display: flex;
+    height: 10%;
+    gap: 12px;
+    align-items: center;
+    margin: 2vh;
+    padding: 1vh;
+}
+.profilePicture{
+    height: 50px;
+    width: 50px;
+}
+.allPosts{
+    padding: 3vh 2vh;
+     // background-color: #3563E9;
+    height: 67%;
+    border-radius: 25px;
+}
+.likeAndComment{
+    display: flex;
+    width: 60%;
+    height: 16%;
+}
+.like{
+    width: 32%;
+}
+.reaction-container {
+    position: relative;
+}
+
+.like-button {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.reactions {
+    position: absolute;
+    bottom: 100%;
+    left: 66%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #3563E9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    color: #3563E9;
+}
+
+.reaction {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-right: 1px #3563E9 solid;
+    border-left: 1px #3563E9 solid;
+}
+
+.reaction:hover {
+    background: #f0f0f0; 
+}

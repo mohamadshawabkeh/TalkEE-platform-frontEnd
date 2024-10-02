@@ -1,11 +1,13 @@
 <section class="allContainer">
     <h1 class="websiteTitle">TalkEE Platform</h1>
     <div class="options">
-        <h1 class="option1">Option 1</h1>
-        <h1 class="option1">Option 1</h1>
+        <h1 class="option1" (click)=" routeToHome()">Home</h1>
+        <h1 class="option1" (click)="routeToProfile()">Profile</h1>
     </div>
     <div class="accountSection">
-        <h2 class="name">Account name</h2>
-        <h2 class="name">Status</h2>
+        <h2 class="name" (click)="navigateToAdminPanel()" *ngIf="isAdmin()"  >Admin Panel</h2>
+        <h2 class="name">{{username}}</h2>
+        <!-- <h2 class="name">Status</h2> -->
+        <h2 class="name" (click)="logout()">Log Out</h2>
     </div>
 </section>

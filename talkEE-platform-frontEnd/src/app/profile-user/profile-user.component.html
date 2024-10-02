@@ -1,0 +1,51 @@
+<main class="mainSection">
+    <nav class="sidenavSection">
+        <app-sidenav></app-sidenav>
+    </nav>
+    <section class="mainProfile">
+        <h1 class="welcomeMsg">Welcome, {{ currentUser }}</h1>
+        <div class="profileUser">
+            <img [src]="profile" alt="profile" class="profilePicture">
+            <div class="userNameSection">
+                <h2 class="userName">{{ currentUser }}</h2>
+                <h3 class="userName">status</h3> 
+            </div> 
+        </div>
+        <div class="allPosts">
+            <section class="allPostsDisplay">
+                <h2 class="personPosts">Your Posts</h2>
+                <div *ngFor="let post of userPosts">
+                    <article class="oldPost">
+                        <h3 class="postTitle">{{ post.title }}</h3>
+                        <p class="postDetails">{{ post.content }}</p>
+                        <div class="likeAndComment">
+                            <div class="reaction-container" (mouseenter)="showReactions = true" (mouseleave)="showReactions = false">
+                                <button class="like-button">Like</button>
+                                <div class="reactions" *ngIf="showReactions">
+                                    <span class="reaction">👍 Like</span>
+                                    <span class="reaction">😂 Funny</span>
+                                    <span class="reaction">😢 Sad</span>
+                                    <span class="reaction">😡 Angry</span>
+                                </div>
+                            </div>
+                            <button class="like" (click)="toggleComment(post._id)">Comment</button>
+                        </div>
+                        <div class="commentSection" *ngIf="toggleToComment[post._id]">
+                            <div class="oldComments">
+                                <h4>Comments:</h4>
+                                <div *ngIf="post.comments.length === 0">No comments on this post.</div>
+                                <div *ngFor="let comment of post.comments">
+                                    <p>{{ comment.content }} - <strong>{{ comment.author.username }}</strong></p>
+                                </div>
+                            </div>
+                            <div class="addComment">
+                                <input type="text" class="addCommentInput" placeholder="Add Your Comment here" #commentInput>
+                                <button class="ClickAdd" (click)="addComment(post._id, commentInput.value); commentInput.value = '';">Send</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </section>
+</main>

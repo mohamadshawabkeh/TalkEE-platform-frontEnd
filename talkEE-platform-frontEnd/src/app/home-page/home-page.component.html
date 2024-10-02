@@ -3,27 +3,66 @@
         <app-sidenav></app-sidenav>
     </nav>
     <section class="allContainer">
-        <nav class="navSection">
-            <app-navbar></app-navbar>
-        </nav>
-        <div class="blogContainer">
+        <div class="blogContainer" *ngIf="!showProfile">
             <div class="postSide">
                 <div class="addPost">
-                    <div class="userNameSection">
-                        <h2 class="userName">user name</h2>
-                        <h3 class="userName">status</h3>
-                    </div>
-                    <textarea name="addPost" id="addPost" class="postInput">Add your thoughts here</textarea>
-                     <!-- <input class="postInput" [(ngModel)]="post" placeholder="Write your thoughts..."> -->
-                     <button class="postClick">Post</button>
-
+                    <textarea name="addPost" id="addPost" class="postInput" [(ngModel)]="newPostContent" placeholder="Add your thoughts here"></textarea>
+                    <input type="text" class="postTitleInput" [(ngModel)]="newPostTitle" placeholder="Post Title" /> <!-- New input for title -->
+                    <button class="postClick" (click)="createPost()">Post</button>
                 </div>
                 <div class="allPosts">
-                    old posts
+                    <h2 class="checkPosts">Check Posts</h2>
+                    <section class="allPostsDisplay">
+                        <div *ngFor="let post of posts" class="postsRender">
+                            <div class="profileUser">
+                                <img [src]="profile" alt="profile" class="profilePicture">
+                                <div class="userNameSection">
+                                    <h2 class="userName">{{ post.author.username }}</h2>
+                                    <h3 class="userName">status</h3>
+                                </div>
+                            </div>
+                            <article class="oldPost">
+                                <h3 class="postTitle">{{ post.title }}</h3> <!-- Added title display -->
+                                <h3 class="postDetails">{{ post.content }}</h3>
+                                <div class="likeAndComment">
+                                    <div class="reaction-container" (mouseenter)="showReactions = true" (mouseleave)="showReactions = false">
+                                        <button class="like-button">Like</button>
+                                        <div class="reactions" *ngIf="showReactions">
+                                            <span class="reaction">👍 Like</span>
+                                            <span class="reaction">😂 Funny</span>
+                                            <span class="reaction">😢 Sad</span>
+                                            <span class="reaction">😡 Angry</span>
+                                        </div>
+                                    </div>
+                                    <button class="like" (click)="toggleComment(post._id)">Comment</button>
+                                    <button class="edit-button" (click)="editPost(post)">Edit</button>
+                                    <button class="delete-button" (click)="deletePost(post._id)">Delete</button>
+                                </div>
+                                <div class="commentSection" *ngIf="toggleToComment[post._id]">
+                                    <div class="oldComments">
+                                        <h4>Comments:</h4>
+                                        <div *ngIf="post.comments.length === 0">No comments on this post.</div>
+                                        <div *ngFor="let comment of post.comments">
+                                            <p>{{ comment.content }} - <strong>{{ comment.author.username }}</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="addComment">
+                                        <input type="text" class="addCommentInput" placeholder="Add Your Comment here" #commentInput>
+                                        <button class="ClickAdd" (click)="addComment(post._id, commentInput.value); commentInput.value = '';">Send</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
                 </div>
             </div>
             <aside class="newSide">
-                news side here
+                <div class="newSideContainer">
+                    <h3 class="commingIn">Coming in new release</h3>
+                </div>
+                <div class="newSideContainer">
+                    <h3 class="commingIn">Coming in new release</h3>
+                </div>
             </aside>
         </div>
     </section>

@@ -1,5 +1,5 @@
 .mainContainer{
-    background-color: #030637;
+    background-color: #F9F7F7;
     padding: 2vh 0vh;
 }
 .loginContainer{
@@ -7,7 +7,7 @@
     margin: 11vh 32vw 11vh 32vw;
     padding: 4vh 4vw 4vh 3vw;
     flex-direction: column;
-    background-color: #3C0753;
+     // background-color: #3563E9;
     border-radius: 25px;
     box-shadow: 0px 10px 50px 30px rgb(255 255 255 / 9%);
 }
@@ -19,12 +19,12 @@
     padding: 5vh 0vh;
 }
 .loginButton{
-    color: #910A67;
+    color: #222831;
 }
 .haveAccount,
 .userName,
 .password{
-    color: #FFFFFF;
+    color: #222831;
     font-size: 13px;
     font-weight: 400;
     line-height: 19.5px;
@@ -55,15 +55,20 @@
 }
 
 .login{
-    width: 100%;
-    color: #FFFFFF;
-    background-color: #910A67;
+    width: 103%;
+    color: #3563E9;
+    background-color: #222831;
     height: 7.2vh;
     border: none;
     border-radius: 8px;
 }
+.logoImg{
+    width: 19px;
+    height: 19px;
+    opacity: 45%;
+}
 .lostPassword{
-    color:#910A67;
+    color:#222831;
     text-decoration: underline;
     cursor: pointer;
     font-size: 15px;

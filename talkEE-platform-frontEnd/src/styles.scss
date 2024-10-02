@@ -2,6 +2,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
+
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -34,11 +35,19 @@ $talkEE-platform-frontEnd-theme: mat.define-theme((
 
 // Comment out the line below if you want to use the deprecated `color` inputs.
 // @include mat.color-variants-backwards-compatibility($talkEE-platform-frontEnd-theme);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 body{
     margin: 0px !important;
 
 }
-html, body { height: 100%; 
-background-color: #030637;
-color: #FFFFFF;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: auto; 
+background-color: #F9F7F7;
+color: #222831;
+font-family: 'Plus+Jakarta+Sans', sans-serif;
+
+}
+body { margin: 0; }

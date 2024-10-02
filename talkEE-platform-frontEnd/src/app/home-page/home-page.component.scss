@@ -17,9 +17,10 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
 }
 .newSide{
-    width: 70%;
+    width: 30%;
     display: flex;
     flex-direction: column;
 }
@@ -27,33 +28,134 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    padding: 2vh;
+    padding:0vh 3vh;
 }
 .addPost{
     padding: 3vh 4vh;
-    background-color: #720455;
+     // background-color: #3563E9;
     border-radius: 24px;
+    height: 25vh;
+    margin: 3vh 0vh;
+    border: #aaaaaa solid 1px;
 }
 .addPostText{
-    color: #FFFFFF;
+    color: #222831;
     padding: 2vh;
-    background-color: #720455;
+     // background-color: #3563E9;
 }
 .userName{
     font-size: 14px;
 }
 .postInput{
-    background-color: #3C0753;
-    color: #FFFFFF;
+     // background-color: #3563E9;
+    color: #222831;
     font-size: 16px;
     padding: 1vh;
     outline: none;
     border: none;
     border-radius: 9px;
     width: 96%;
-    height: 30%;
+    height: 74%;
+    resize: none;
+    border: #aaaaaa solid 1px;
 }
 .postClick{
-    width: 96%;
-    height: 30%;
+    width: 16%;
+    height: 18%;
+    border: none;
+    border-radius: 8px;
+    border: #aaaaaa solid 1px;
+}
+.allPosts{
+    border: #aaaaaa solid 1px;
+    padding: 3vh 2vh;
+     // background-color: #3563E9;
+    height: 110vh;
+    border-radius: 25px;
+    overflow-y: auto;
+}
+.profileUser{
+    display: flex;
+    height: 10%;
+    gap: 12px;
+    align-items: center;
+    margin: 2vh;
+    padding: 1vh;
+    border-bottom: #222831 1px solid;
+}
+.profilePicture{
+    height: 50px;
+    width: 50px;
+}
+.allPostsDisplay{
+    // border: #222831 1px solid;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.oldPost{
+    padding: 2vh;
+    height: 70%;
+}
+.postsRender{
+    border: 1px #aaaaaa solid;
+    border-radius: 8px;
+}
+.newSideContainer{
+     // background-color: #3563E9;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 8px;
+    border-radius: 21px;
+    height: 24%;
+    border: #aaaaaa solid 1px;
+}
+.profileClass{
+    width: 97%;
+    margin: 6vh;
+}
+.likeAndComment{
+    display: flex;
+    width: 60%;
+    height: 16%;
+}
+.like{
+    width: 32%;
+}
+.reaction-container {
+    position: relative;
+}
+
+.like-button {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.reactions {
+    position: absolute;
+    bottom: 100%;
+    left: 169%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #3563E9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    color: #3563E9;
+}
+
+.reaction {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-right: 1px #3563E9 solid;
+    border-left: 1px #3563E9 solid;
+}
+
+.reaction:hover {
+    background: #f0f0f0; 
 }

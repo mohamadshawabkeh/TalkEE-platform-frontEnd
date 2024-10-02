@@ -1,21 +1,25 @@
 .allContainer{
-    background-color: #720455;
     padding: 3vh;
-    height: 94%;
+    height: 58%;
+    position: fixed;
+    margin: 3vh -1vh;
+    border-radius: 43px;
+    border: #aaaaaa 1px solid;
 }
 .option1,
 .websiteTitle{
-    color: #FFFFFF;
+    color: #222831;
 }
 .websiteTitle{
     font-size: 32px;
     font-weight: 700;
+    margin: 2vh 0vh;
 }
 .accountSection{
     position: absolute;
-    bottom: 0px;
+    bottom: 18px;
 }
 .name{
     font-size: 16px;
-    color: #FFFFFF;
+    color: #222831;
 }
